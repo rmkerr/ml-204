@@ -1,0 +1,35 @@
+Intro:
+	How do you teach a machine? That's the question studied in the field of machine learning. In particular,
+	we're going to talk today about classification, and show you some examples of a binary classifier. 
+What is a classifier:
+	In the simplest sense, a binary classifiers job is to take some information related to an item or event, 
+	and classify it into one of two categories. Take for example the spam filtering on your email. A particular
+	email can be spam, or not spam--there is no intermediate category. A binary classifier would take certain 
+	variables--the frequency of certain words (for example, how many times the word "Nigerian Prince" shows up 
+	in the email), and other potentially useful information like the location of the sender and whether or not you've
+	emailed them before.
+Why machine learning:
+	This kind of classifer sounds easy enough to put together by hand--but realistically there are some issues. One is
+	that the nature of spam is constantly changing. Every time someone comes up with a new email scam, you would
+	have to change your program. By the time you've done that, the scammers could have already gotten to their targets.
+	Machine learning lets your program adapt on the fly--as soon as spam starts coming in, it can start blocking it. 
+*show graphic of example data*
+	Take this data for example. The two axis represent two different variables that our algorithm is using to 
+	classify data. The stars represent a positive example, and the crosses represent negative. In the computer these
+	are represented as 1 and -1 respectively, something that we'll come back to later. 
+	Our goal is to produce something called a decision boundary -- which looks something like this *show margin-1*. 
+What makes a decision boundary--Large margin:
+	The goal of our machine learning algorithm is to get all of our positive examples on one side of the boundary, and 
+	all of our negative examples on the other. The decision boundary is a hyperplane--that is, a surface of 1 dimension
+	less than our data. In this case our data is 2 dimensional, so our decision boundary is a 1d line. 
+	Now, not only do we want all of our examples to be on the correct side of the hyperplane, we want them to be as far
+	away from it as possible. Here's where linear algebra starts to come in to play. To find the distance of a 
+	particular point from the hyperplane, we first take the normal vector of the line *show margin-2*, and the 
+	position vector of the point *show margin-3*. To find the distance of the point from the line, we take the 
+	projection onto the normal vector of the position vector *show margin-4*.   
+The support vector machine:
+	Unfortunately with our time limits we can't get into a ton of detail about what 
+	
+		 
+	 
+ 
