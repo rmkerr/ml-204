@@ -1,5 +1,8 @@
+%Load in libsvm
+addpath('C:\Program Files\MATLAB\R2015a\toolbox\libsvm');
+
 % %Data will be loaded into X, y
-load('ex6data1.mat');
+load('data1.mat');
 
 y(y==0) = -1;
 
@@ -33,7 +36,7 @@ line([0,w(1)]+1.9225,[0,w(2)]+3.4225);
 %plot(w);
 
 % now plot decision area
-[xi,yi] = meshgrid([-2:0.01:6],[-1:0.01:6]);
+[xi,yi] = meshgrid(-2:0.01:6,-1:0.01:6);
 dd = [xi(:),yi(:)];
 [predicted_label, accuracy, decision_values] = svmpredict(zeros(size(dd,1),1), dd, model);
 pos = find(predicted_label==1);
